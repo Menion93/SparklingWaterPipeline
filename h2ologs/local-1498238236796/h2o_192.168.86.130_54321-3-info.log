@@ -1,0 +1,54 @@
+06-23 10:17:20.321 192.168.86.130:54321  9804   #r thread INFO: ----- H2O started  -----
+06-23 10:17:20.344 192.168.86.130:54321  9804   #r thread INFO: Build git branch: michalk-bueno
+06-23 10:17:20.344 192.168.86.130:54321  9804   #r thread INFO: Build git hash: e322f0d8ae1bbc8072ec026021aef9d3c86e4add
+06-23 10:17:20.344 192.168.86.130:54321  9804   #r thread INFO: Build git describe: jenkins-3.12.0.1-6-ge322f0d
+06-23 10:17:20.344 192.168.86.130:54321  9804   #r thread INFO: Build project version: 3.10.5.1 (latest version: 3.10.5.2)
+06-23 10:17:20.344 192.168.86.130:54321  9804   #r thread INFO: Build age: 13 days
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Built by: 'jenkins'
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Built on: '2017-06-09 18:24:24'
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Build git branch: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Build git hash: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Build git describe: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Build project version: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Built by: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Watchdog Built on: (unknown)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Processed H2O arguments: [-name, sparkling-water-andrea_local-1498238236796, -ga_opt_out, -log_level, INFO, -baseport, 54321, -ip, 192.168.86.130, -log_dir, /home/andrea/IdeaProjects/h20prova/h2ologs/local-1498238236796]
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Java availableProcessors: 1
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Java heap totalMemory: 121.9 MB
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Java heap maxMemory: 1.88 GB
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Java version: Java 1.8.0_131 (from Oracle Corporation)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: JVM launch parameters: [-javaagent:/home/andrea/idea-IU-171.3780.107/lib/idea_rt.jar=34809:/home/andrea/idea-IU-171.3780.107/bin, -Dfile.encoding=UTF-8]
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: OS version: Linux 4.8.0-56-generic (amd64)
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: Machine physical memory: 7.78 GB
+06-23 10:17:20.345 192.168.86.130:54321  9804   #r thread INFO: X-h2o-cluster-id: 1498238237318
+06-23 10:17:20.349 192.168.86.130:54321  9804   #r thread INFO: User name: 'andrea'
+06-23 10:17:20.349 192.168.86.130:54321  9804   #r thread INFO: Opted out of sending usage metrics.
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: IPv6 stack selected: false
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: Possible IP Address: ens33 (ens33), fe80:0:0:0:3c5d:188:4945:7912%ens33
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: Possible IP Address: ens33 (ens33), 192.168.86.130
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: Possible IP Address: lo (lo), 0:0:0:0:0:0:0:1%lo
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: Possible IP Address: lo (lo), 127.0.0.1
+06-23 10:17:20.350 192.168.86.130:54321  9804   #r thread INFO: H2O node running in unencrypted mode.
+06-23 10:17:20.361 192.168.86.130:54321  9804   #r thread INFO: Internal communication uses port: 54322
+06-23 10:17:20.361 192.168.86.130:54321  9804   #r thread INFO: Listening for HTTP and REST traffic on http://192.168.86.130:54321/
+06-23 10:17:20.433 192.168.86.130:54321  9804   #r thread INFO: H2O cloud name: 'sparkling-water-andrea_local-1498238236796' on /192.168.86.130:54321, discovery address /232.81.146.218:59473
+06-23 10:17:20.433 192.168.86.130:54321  9804   #r thread INFO: If you have trouble connecting, try SSH tunneling from your local machine (e.g., via port 55555):
+06-23 10:17:20.433 192.168.86.130:54321  9804   #r thread INFO:   1. Open a terminal and run 'ssh -L 55555:localhost:54321 andrea@192.168.86.130'
+06-23 10:17:20.433 192.168.86.130:54321  9804   #r thread INFO:   2. Point your browser to http://localhost:55555
+06-23 10:17:20.539 192.168.86.130:54321  9804   #r thread INFO: Log dir: '/home/andrea/IdeaProjects/h20prova/h2ologs/local-1498238236796'
+06-23 10:17:20.540 192.168.86.130:54321  9804   #r thread INFO: Cur dir: '/home/andrea/IdeaProjects/h20prova'
+06-23 10:17:20.560 192.168.86.130:54321  9804   #r thread INFO: HDFS subsystem successfully initialized
+06-23 10:17:20.580 192.168.86.130:54321  9804   #r thread INFO: S3 subsystem successfully initialized
+06-23 10:17:20.580 192.168.86.130:54321  9804   #r thread INFO: Flow dir: '/home/andrea/h2oflows'
+06-23 10:17:20.614 192.168.86.130:54321  9804   #r thread INFO: Cloud of size 1 formed [192.168.86.130/192.168.86.130:54321]
+06-23 10:17:20.652 192.168.86.130:54321  9804   #r thread INFO: Registered parsers: [GUESS, ARFF, XLS, SVMLight, AVRO, ORC, PARQUET, CSV]
+06-23 10:17:20.652 192.168.86.130:54321  9804   #r thread INFO: Watchdog extension initialized
+06-23 10:17:20.652 192.168.86.130:54321  9804   #r thread INFO: Registered 1 core extensions in: 1ms
+06-23 10:17:20.653 192.168.86.130:54321  9804   #r thread INFO: Registered H2O core extensions: [Watchdog]
+06-23 10:17:21.312 192.168.86.130:54321  9804   #r thread INFO: Registered: 155 REST APIs in: 659ms
+06-23 10:17:21.312 192.168.86.130:54321  9804   #r thread INFO: Registered REST API extensions: [Algos, water.api.RegisterResourceRoots, Core V3, Core V4, XGBoost]
+06-23 10:17:21.532 192.168.86.130:54321  9804   #r thread INFO: Registered: 226 schemas in 219ms
+06-23 10:17:21.532 192.168.86.130:54321  9804   #r thread INFO: H2O started in 1840ms
+06-23 10:17:21.533 192.168.86.130:54321  9804   #r thread INFO: 
+06-23 10:17:21.533 192.168.86.130:54321  9804   #r thread INFO: Open H2O Flow in your web browser: http://192.168.86.130:54321
+06-23 10:17:21.533 192.168.86.130:54321  9804   #r thread INFO: 

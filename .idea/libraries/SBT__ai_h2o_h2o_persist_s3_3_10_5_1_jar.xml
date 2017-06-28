@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: ai.h2o:h2o-persist-s3:3.10.5.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/ai.h2o/h2o-persist-s3/jars/h2o-persist-s3-3.10.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/ai.h2o/h2o-persist-s3/srcs/h2o-persist-s3-3.10.5.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

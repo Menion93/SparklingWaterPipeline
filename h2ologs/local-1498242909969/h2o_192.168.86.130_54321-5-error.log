@@ -1,0 +1,46 @@
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: java.lang.IllegalArgumentException: Can not create a Path from an empty string
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.apache.hadoop.fs.Path.checkPathArg(Path.java:127)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.apache.hadoop.fs.Path.<init>(Path.java:135)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.persist.PersistHdfs.canHandle(PersistHdfs.java:557)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.persist.PersistManager.calcTypeaheadMatches(PersistManager.java:234)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.api.TypeaheadHandler.files(TypeaheadHandler.java:12)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at java.lang.reflect.Method.invoke(Method.java:498)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.api.Handler.handle(Handler.java:63)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.api.RequestServer.serve(RequestServer.java:448)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.api.RequestServer.doGeneric(RequestServer.java:297)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.api.RequestServer.doGet(RequestServer.java:221)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:735)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at javax.servlet.http.HttpServlet.service(HttpServlet.java:848)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:503)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:429)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at water.JettyHTTPD$LoginHandler.handle(JettyHTTPD.java:183)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.Server.handle(Server.java:370)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:971)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1033)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+06-23 11:36:14.973 192.168.86.130:54321  13493  #87643-60 ERRR: 	at java.lang.Thread.run(Thread.java:748)
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: Caught exception: 
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: 
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: ERROR MESSAGE:
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: 
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: Can not create a Path from an empty string
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: 
+06-23 11:36:14.974 192.168.86.130:54321  13493  #87643-60 ERRR: ; Stacktrace: [java.lang.IllegalArgumentException: Can not create a Path from an empty string,     org.apache.hadoop.fs.Path.checkPathArg(Path.java:127),     org.apache.hadoop.fs.Path.<init>(Path.java:135),     water.persist.PersistHdfs.canHandle(PersistHdfs.java:557),     water.persist.PersistManager.calcTypeaheadMatches(PersistManager.java:234),     water.api.TypeaheadHandler.files(TypeaheadHandler.java:12),     sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method),     sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62),     sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43),     java.lang.reflect.Method.invoke(Method.java:498),     water.api.Handler.handle(Handler.java:63),     water.api.RequestServer.serve(RequestServer.java:448),     water.api.RequestServer.doGeneric(RequestServer.java:297),     water.api.RequestServer.doGet(RequestServer.java:221),     javax.servlet.http.HttpServlet.service(HttpServlet.java:735),     javax.servlet.http.HttpServlet.service(HttpServlet.java:848),     org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:684),     org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:503),     org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1086),     org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:429),     org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1020),     org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135),     org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154),     org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116),     water.JettyHTTPD$LoginHandler.handle(JettyHTTPD.java:183),     org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154),     org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116),     org.eclipse.jetty.server.Server.handle(Server.java:370),     org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:494),     org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53),     org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:971),     org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1033),     org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:644),     org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235),     org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72),     org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264),     org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608),     org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543),     java.lang.Thread.run(Thread.java:748)];parms={limit=-1, src=}

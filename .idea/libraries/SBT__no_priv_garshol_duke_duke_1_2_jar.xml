@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: no.priv.garshol.duke:duke:1.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/no.priv.garshol.duke/duke/jars/duke-1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/no.priv.garshol.duke/duke/srcs/duke-1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

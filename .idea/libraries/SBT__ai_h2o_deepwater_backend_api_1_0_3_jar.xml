@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: ai.h2o:deepwater-backend-api:1.0.3:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/ai.h2o/deepwater-backend-api/jars/deepwater-backend-api-1.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/ai.h2o/deepwater-backend-api/srcs/deepwater-backend-api-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
