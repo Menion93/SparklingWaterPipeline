@@ -9,20 +9,21 @@ import org.apache.spark.h2o.H2OContext
 import org.apache.spark.ml.feature.{HashingTF, IDF, RegexTokenizer, StopWordsRemover}
 import org.apache.spark.ml.h2o.H2OPipeline
 import org.apache.spark.ml.h2o.features.{ColRemover, DatasetSplitter}
-import org.apache.spark.ml.h2o.models.H2ODeepLearning
-import org.apache.spark.sql.types.{StringType, StructField, StructType}
+import org.apache.spark.sql.types.{IntegerType, StringType, StructField, StructType}
 import org.apache.spark.sql.{DataFrame, Row, SQLContext}
 import water.support.{SparkContextSupport, SparkSessionSupport}
 import org.apache.spark.sql.SparkSession
 
 
-
 object h20try extends SparkContextSupport with SparkSessionSupport {
 
-  val path = "/media/andrea/F/Data/subset/allen-p/all_documents"
-  val savePath = "/media/andrea/F/Data/subset/allen-p/result/rdd.txt"
+  val path = "/media/andrea/F/Data/preprocessed_subset"
+  val savePath = "/media/andrea/F/Data/output/h20"
 
   def main(args: Array[String]): Unit = {
+
+    var startProgramTime = System.currentTimeMillis()
+
     // Configure this application
     val conf: SparkConf = configure("Data preparation")
 
@@ -60,30 +61,35 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
 
     val colRemover = new ColRemover().
       setKeep(true).
-      setColumns(Array[String]("label", "tf_idf"))
+      setColumns(Array[String]("tf_idf"))
 
     val splitter = new DatasetSplitter().
       setKeys(Array[String]("train.hex", "valid.hex")).
       setRatios(Array[Double](0.8)).
       setTrainKey("train.hex")
 
-    val dl = new H2ODeepLearning().
-      setEpochs(10).
-      setL1(0.001).
-      setL2(0.0).
-      setHidden(Array[Int](200, 200)).
-      setValidKey(splitter.getKeys(1)).
-      setResponseColumn("label")
-
     val pipeline = new H2OPipeline().
       setStages(Array(tokenizer, stopWordsRemover, hashingTF, idf, colRemover, splitter))
 
+    var startTime = System.currentTimeMillis()
     val data = load(path, sc)
+    var endTime = System.currentTimeMillis()
+
+    print("Loading the dataset took " + (endTime-startTime)/1000 + " seconds")
+
+    startTime = System.currentTimeMillis()
     val model = pipeline.fit(data)
+    endTime = System.currentTimeMillis()
 
-    data.toJavaRDD.saveAsTextFile(savePath);
+    print("Processing the dataset took " + (endTime-startTime)/1000 + " seconds")
 
-    return 0;
+    print("Saving the result...")
+
+    model.save(savePath)
+
+    print("Job finished in " + (System.currentTimeMillis()-startProgramTime)/1000 + " seconds")
+
+    //data.toJavaRDD.saveAsTextFile(savePath);
 
   }
 
@@ -92,7 +98,11 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
 
     val smsSchema = StructType(Array(
       StructField("text", StringType, nullable = false)))
-    val rowRDD = sc.textFile(dataFile).map(p => Row(p))
+
+    val rowRDD = sc.textFile(dataFile)
+      .filter(line => line.split("\t")(0) == "content")
+      .map(p => Row(p.split("\t")(1)))
+
     sqlContext.createDataFrame(rowRDD, smsSchema)
   }
 
