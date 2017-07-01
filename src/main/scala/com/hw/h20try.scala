@@ -79,13 +79,13 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
 
     startTime = System.currentTimeMillis()
     val model = pipeline.fit(data)
+    val result = model.transform(data)
     endTime = System.currentTimeMillis()
 
     print("Processing the dataset took " + (endTime-startTime)/1000 + " seconds")
-
     print("Saving the result...")
 
-    model.save(savePath)
+    result.toJavaRDD.saveAsTextFile(savePath)
 
     print("Job finished in " + (System.currentTimeMillis()-startProgramTime)/1000 + " seconds")
 
@@ -100,7 +100,7 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
       StructField("text", StringType, nullable = false)))
 
     val rowRDD = sc.textFile(dataFile)
-      .filter(line => line.split("\t")(0) == "content")
+      .filter(line => line.split("\t")(0) == "content" && line.split("\t")(0) != "")
       .map(p => Row(p.split("\t")(1)))
 
     sqlContext.createDataFrame(rowRDD, smsSchema)
