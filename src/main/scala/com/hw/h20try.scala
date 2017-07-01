@@ -100,7 +100,7 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
       StructField("text", StringType, nullable = false)))
 
     val rowRDD = sc.textFile(dataFile)
-      .filter(line => line.split("\t")(0) == "content" && line.split("\t")(0) != "")
+      .filter(line => line.split("\t")(0) == "content")
       .map(p => Row(p.split("\t")(1)))
 
     sqlContext.createDataFrame(rowRDD, smsSchema)
