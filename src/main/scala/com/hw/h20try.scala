@@ -17,8 +17,8 @@ import org.apache.spark.sql.SparkSession
 
 object h20try extends SparkContextSupport with SparkSessionSupport {
 
-  val path = "/media/andrea/F/Data/preprocessed_subset"
-  val savePath = "/media/andrea/F/Data/output/h20"
+  //val path = "/media/andrea/F/Data/preprocessed_subset"
+  //val savePath = "/media/andrea/F/Data/output/h20"
 
   def main(args: Array[String]): Unit = {
 
@@ -72,7 +72,7 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
       setStages(Array(tokenizer, stopWordsRemover, hashingTF, idf, colRemover, splitter))
 
     var startTime = System.currentTimeMillis()
-    val data = load(path, sc)
+    val data = load(args(0), sc)
     var endTime = System.currentTimeMillis()
 
     print("Loading the dataset took " + (endTime-startTime)/1000 + " seconds")
@@ -85,7 +85,7 @@ object h20try extends SparkContextSupport with SparkSessionSupport {
     print("Processing the dataset took " + (endTime-startTime)/1000 + " seconds")
     print("Saving the result...")
 
-    result.toJavaRDD.saveAsTextFile(savePath)
+    result.toJavaRDD.saveAsTextFile(args(1))
 
     print("Job finished in " + (System.currentTimeMillis()-startProgramTime)/1000 + " seconds")
 
